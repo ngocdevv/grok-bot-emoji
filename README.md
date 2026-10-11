@@ -75,3 +75,15 @@ bunx expo export --platform all
 The `postinstall` script copies `canvaskit.wasm` into `public/` so the web build
 can run with Metro. There is no need to create or edit the `ios/` and `android/`
 directories directly.
+
+## Native ports
+
+The same Orb is also available as two dependency-free native apps that mirror the
+Expo component one-to-one (same paths, poses, cadence, trails and picker layout):
+
+- `ios-swift/`: Swift 5 + SwiftUI (`Canvas` + `TimelineView`), iOS 17+. Open
+  `ios-swift/GrokBotOrb.xcodeproj`.
+- `android-kotlin/`: Kotlin 2.2 + Jetpack Compose, minSdk 26. Open
+  `android-kotlin/` in Android Studio or run `./gradlew :app:installDebug`.
+
+Each folder has its own README with a file-by-file mapping back to `src/components`.
